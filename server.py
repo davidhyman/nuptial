@@ -50,7 +50,6 @@ def check_auth(key=None, return_falsy=False):
     authenticated = s.get('authenticated')
     if key is None:
         key = bottle.request.forms.get('email')
-    print key
     if authenticated and not key:
         return authenticated
     password = bottle.request.forms.get('password')
@@ -126,7 +125,6 @@ def reregister():
     password = bottle.request.forms.get('password')
     secret = bottle.request.forms.get('secret')
     stored_key = r.get(secret)
-    print key, check_auth(False, True), stored_key
     if key==check_auth(False, True) or (stored_key and stored_key==key):
         m = make_mail(key, "Password reset at {}".format(config['site_url']), "{} \n\n password was just reset at \n\n {}".format(key, config['site_url']))
         send_emails([m])
