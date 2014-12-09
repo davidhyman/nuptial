@@ -1,0 +1,46 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+header {
+    background: #356;
+}
+#content, #menu {
+    margin: auto;
+    width: 800px;
+}
+#content {
+    min-height: 600px;
+    background: #eee;
+    padding: 10px;
+    width: 780px;
+}
+body {
+    background: #ddd;
+}
+#menu a {
+	text-decoration: none;
+	color: #555;
+    font-weight: bold;
+    font-size: 12pt;
+    padding: 20px;
+    width: 120px;
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    background: #6da;
+}
+#menu a:nth-child(even) {
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+#menu a:visited {
+	text-decoration: none;
+}
+#menu a:hover {
+    background: #6cc;
+}
+#menu a.current {
+	background: #6ad;
+}
